@@ -13,9 +13,12 @@ import { HeroesComponent } from './heroes/heroes.component';
   ],
   imports: [
     BrowserModule,
-
     FormsModule
   ],
+  exports: [
+    HeroesComponent
+  ],
+
   providers: [
     provideClientHydration()
   ],
