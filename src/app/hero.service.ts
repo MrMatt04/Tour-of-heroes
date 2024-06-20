@@ -55,6 +55,7 @@ export class HeroService {
 
   /* GET heroes whose name contains search term */
   searchHeroes(term: string): Observable<Hero[]> {
+    console.log(term);
     if (!term.trim()) {
       // if not search term, return empty hero array.
       return of([]);

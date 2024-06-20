@@ -1,6 +1,11 @@
 <div id="search-component">
-  <label for="search-box">Hero Search</label>
-  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
+  <!-- <label for="search-box">Hero Search</label>
+  <input #searchBox id="search-box" (input)="search(searchBox.value)" /> -->
+
+  <form [formGroup]="HeroSearch">
+    <label for="search">Look up heroes</label>
+    <input id="search" type="text" formControlName="search" />
+  </form>
 
   <ul class="search-result">
     <li *ngFor="let hero of heroes$ | async">

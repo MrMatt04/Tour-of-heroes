@@ -1,9 +1,18 @@
-<div *ngIf="hero">
-  <h2>{{ hero.name | uppercase }} Details</h2>
+<div>
+  <!-- <h2>{{ hero.name | uppercase }} Details</h2>
   <div><span>id: </span>{{ hero.id }}</div>
   <div>
     <label for="hero-name">Hero name: </label>
     <input id="hero-name" [(ngModel)]="hero.name" placeholder="name" />
+  </div> -->
+  <div>
+    <h2>{{ HeroName.controls.heros.value }} details</h2>
+    <form [formGroup]="HeroName">
+      <label for="HeroName">Name:</label>
+      <input id="HeroName" type="text" formControlName="heros" />
+      <label for="HeroPower">Superpower:</label>
+      <textarea id="HeroPower" formControlName="power"></textarea>
+    </form>
   </div>
 </div>
 <button type="button" (click)="goBack()">go back</button>
